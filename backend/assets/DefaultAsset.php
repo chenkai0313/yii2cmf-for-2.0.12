@@ -5,12 +5,11 @@ namespace backend\assets;
 use yii\web\AssetBundle;
 
 /**
- * 忽略此文件不用
  * Main backend application asset bundle.
  */
-class AppAsset extends AssetBundle
+class DefaultAsset extends AssetBundle
 {
-    public $sourcePath = '@backend/web';
+    public $sourcePath = '@backend/web/default';
 
     public $css = [
         'css/site.css',
