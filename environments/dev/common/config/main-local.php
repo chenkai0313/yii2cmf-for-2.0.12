@@ -1,13 +1,6 @@
 <?php
 return [
-    'components' => [
-        'db' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=yii2advanced',
-            'username' => 'root',
-            'password' => '',
-            'charset' => 'utf8',
-        ],
+    /*'components' => [
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@common/mail',
@@ -16,5 +9,5 @@ return [
             // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
-    ],
+    ],*/
 ];
