@@ -5,7 +5,7 @@
             <a href="javascript:void(0)"><i class="icon icon-paste"></i> 栏目分类<i class="icon-chevron-right nav-parent-fold-icon"></i></a>
             <ul class="nav">
                 <li><a href="javascript:void(0)" target="win"><i class="icon icon-plus"></i> 添加栏目分类</a></li>
-                <li><a href="javascript:void(0)" target="win"><i class="icon icon-list"></i> 栏目分类列表</a></li>
+                <li class="active"><a href="javascript:void(0)" target="win"><i class="icon icon-list"></i> 栏目分类列表</a></li>
             </ul>
         </li>
         <li class="nav-parent">

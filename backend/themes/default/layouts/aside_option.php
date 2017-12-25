@@ -9,7 +9,7 @@
                 <li><a href="javascript:void(0)" target="win"><i class="icon icon-windows"></i> 系统配置</a></li>
                 <li><a href="javascript:void(0)" target="win"><i class="icon icon-envelope-alt"></i> 邮箱服务</a></li>
                 <li><a href="javascript:void(0)" target="win"><i class="icon icon-qq"></i> 第三方登录</a></li>
-                <li><a href="javascript:void(0)" target="win"><i class="icon icon-list"></i> 配置项列表</a></li>
+                <li class="active"><a href="javascript:void(0)" target="win"><i class="icon icon-list"></i> 配置项列表</a></li>
             </ul>
         </li>
         <li class="nav-parent">
