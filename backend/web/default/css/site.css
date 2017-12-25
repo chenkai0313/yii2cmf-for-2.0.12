@@ -54,7 +54,7 @@ a:hover,a:focus{color: #9d01a9;}
 
 
 /* site/default */
-.default-breadcrumb{ height: 28px; border-bottom:1px solid #d7e4ea;line-height:28px;background:#edf6fa;}
+.default-breadcrumb{ height: 32px; border-bottom:1px solid #d7e4ea;line-height:32px;background:#edf6fa;}
 .default-breadcrumb span{float:left;font-weight:bold;margin-left:12px;}
 .default-breadcrumb .breadcrumb{ margin-bottom: 0; padding: 0;}
 .default-breadcrumb .breadcrumb > li + li::before {content: ">"; padding-left: 8px;}

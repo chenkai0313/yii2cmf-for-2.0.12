@@ -21,8 +21,8 @@ class SettingController extends Controller
         ];
     }
 
-    public function actionEdit($type = 'web')
+    public function actionIndex()
     {
-        return $this->render('edit');
+        return $this->render('index');
     }
 }
