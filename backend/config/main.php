@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-backend',
+    'name' => 'mxdCMS',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
@@ -17,6 +18,11 @@ return [
             'basePath' => '@webroot/assets',
             'baseUrl' => '@web/assets',
             'linkAssets' => true,
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'js' => ['jquery.min.js'],
+                ],
+            ],
         ],
         'request' => [
             'csrfParam' => '_csrf-backend',

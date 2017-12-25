@@ -1,120 +1,72 @@
-html,
-body {
-    height: 100%;
-}
+/* 全局css类 */
+body{font-family:\5b8b\4f53,arial;}
+ol, ul{margin-bottom:0; padding-left: 0;}
+li{list-style: none;}
+a:hover,a:focus{color: #9d01a9;}
 
-.wrap {
-    min-height: 100%;
-    height: auto;
-    margin: 0 auto -60px;
-    padding: 0 0 60px;
-}
 
-.wrap > .container {
-    padding: 70px 15px 20px;
-}
+/* easyui-layout */
+.easyui-panel{position:absolute;overflow:hidden;}
+.easyui-layout-north{top:0;left:0;width:100%;height:56px;z-index:3;}
+.easyui-layout-west{top:56px;bottom:0;left:0;width:200px;border-right:5px solid #F6F6F6;z-index:2;}
+.easyui-layout-center{top:56px;bottom:0;left:200px;right:0;}
+.easyui-panel-body{height:100%;background-color:#FFF;}
+.easyui-layout-north .easyui-panel-body{height:100%;overflow:hidden;background:url(../images/north.png);}
+.easyui-layout-west .easyui-panel-body{padding:5px;border-right: 1px solid #95B8E7; overflow:hidden;}
+.easyui-layout-center .easyui-panel-body{font-size:0;line-height:0;border-left: 1px solid #95B8E7;overflow:auto;}
 
-.footer {
-    height: 60px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-}
 
-.jumbotron {
-    text-align: center;
-    background-color: transparent;
-}
+/* link-btn */
+.link-btn{display:inline-block;padding:4px 10px;border:1px solid transparent;border-radius:4px;font-size:13px;line-height:24px;font-weight:bold;text-align:center;cursor:pointer;vertical-align:middle;white-space:nowrap;}
+.link-btn-blue{background-color:#015ea9;}
+.link-btn-green{background-color:#59a901;}
+.link-btn-yellow{background-color:#ffb515;}
+.link-btn-red{background-color:#a90118;}
+.link-btn-magenta{background-color:#a9014b;}
+.link-btn-purple{background-color:#9d01a9;}
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
 
-.not-set {
-    color: #c55;
-    font-style: italic;
-}
 
-/* add sorting icons to gridview sort links */
-a.asc:after, a.desc:after {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    padding-left: 5px;
-}
 
-a.asc:after {
-    content: /*"\e113"*/ "\e151";
-}
+/* header(easyui-layout-north) */
+.header-logo{width:245px;padding-left:15px;}
+.header-logo img{display:block;max-height:56px;}
+.header-menu{padding-top:12px;}
+.header-menu li{float:left;padding-left:5px;padding-right:5px;}
+.header-menu li a{color:#fff;text-shadow:1px 1px 1px rgba(0,0,0,0.5);background-image:url(../images/btn_bg.png);background-position:left top;background-repeat:repeat-x;}
+.header-menu li a:hover{background-position:left center;text-decoration:none;-webkit-transition:all .4s cubic-bezier(.175,.885,.32,1);-o-transition:all .4s cubic-bezier(.175,.885,.32,1);transition:all .4s cubic-bezier(.175,.885,.32,1);}
+.header-link{border-left:1px solid rgba(0,0,0,.6);padding-right:15px;}
+.header-link > li{float:left;position:relative;border-left:1px solid rgba(255,255,255,.2);border-right:1px solid rgba(0,0,0,.6);}
+.header-link > li:last-child{border-right:none;}
+.header-link .header-user a{display:table-cell;padding:12px 15px;height:32px;color:#FFF;font-weight:bold;}
+.header-link .header-user img{display:inline-block;width:32px;height:32px;margin-right:.6em;}
+.header-link .header-logout{padding:10px 15px;}
+.header-link .header-logout button{display:block;width:36px;height:36px;padding:8px;border:0;background:url(../images/toolbar-button.png) no-repeat center top;font-size:0;line-height:0;cursor:pointer;}
+.header-link .header-logout button b{display:block;width:20px;height:20px;background:url(../images/off_small.png) no-repeat center center;}
+.header-link .header-logout button:hover,.north-logout button:focus{background-position:center bottom;}
+.header-link .header-frontend{padding:5px;}
+.header-link .header-frontend a{display:block;color:#FFF;line-height:26px;padding:10px;}
+.header-link .header-frontend a:hover,.header-link li.header-user a:hover{text-decoration:underline;color:#e5e5e5;}
 
-a.desc:after {
-    content: /*"\e114"*/ "\e152";
-}
 
-.sort-numerical a.asc:after {
-    content: "\e153";
-}
+/* left(easyui-layout-west) */
+.west-menu > .btn + .nav{ margin-top: 10px;}
 
-.sort-numerical a.desc:after {
-    content: "\e154";
-}
 
-.sort-ordinal a.asc:after {
-    content: "\e155";
-}
+/* site/default */
+.default-breadcrumb{ height: 28px; border-bottom:1px solid #d7e4ea;line-height:28px;background:#edf6fa;}
+.default-breadcrumb span{float:left;font-weight:bold;margin-left:12px;}
+.default-breadcrumb .breadcrumb{ margin-bottom: 0; padding: 0;}
+.default-breadcrumb .breadcrumb > li + li::before {content: ">"; padding-left: 8px;}
+.default-site{padding:10px 15px;}
+.welcome-info{height:32px;line-height:32px;}
+.welcome-info a, .welcome-info b, .welcome-info i{padding-left:8px;}
+.default-site .shortcut{border:1px solid #ddd;margin-bottom:20px;margin-top:10px;padding:10px;position:relative;}
+.default-site .shortcut h3{position:absolute;left:25px;top:-10px;padding:0 10px;margin: 0; background:#fff;}
+.default-site .shortcut ul{padding-left:35px;overflow:hidden;}
+.default-site .shortcut li{float:left;margin:10px 20px 0 0;text-align:center;}
+.default-site .shortcut li p{line-height:2;}
+.default-site .table{margin-bottom:20px;}
+.default-site .table caption{ background: #f1f1f1; padding-left: 15px; border: 1px solid #ddd; border-bottom: none; color: #353535; font-weight: bold;}
 
-.sort-ordinal a.desc:after {
-    content: "\e156";
-}
 
-.grid-view td {
-    white-space: nowrap;
-}
-
-.grid-view .filters input,
-.grid-view .filters select {
-    min-width: 50px;
-}
-
-.hint-block {
-    display: block;
-    margin-top: 5px;
-    color: #999;
-}
-
-.error-summary {
-    color: #a94442;
-    background: #fdf7f7;
-    border-left: 3px solid #eed3d7;
-    padding: 10px 20px;
-    margin: 0 0 15px 0;
-}
-
-/* align the logout "link" (button in form) of the navbar */
-.nav li > form > button.logout {
-    padding: 15px;
-    border: none;
-}
-
-@media(max-width:767px) {
-    .nav li > form > button.logout {
-        display:block;
-        text-align: left;
-        width: 100%;
-        padding: 10px 15px;
-    }
-}
-
-.nav > li > form > button.logout:focus,
-.nav > li > form > button.logout:hover {
-    text-decoration: none;
-}
-
-.nav > li > form > button.logout:focus {
-    outline: none;
-}

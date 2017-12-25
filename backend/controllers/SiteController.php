@@ -4,16 +4,10 @@ namespace backend\controllers;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
+use backend\models\LoginForm;
 
-/**
- * Site controller
- */
 class SiteController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [
@@ -25,7 +19,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index', 'default'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -40,21 +34,17 @@ class SiteController extends Controller
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return string
-     */
     public function actionIndex()
     {
+        $this->layout = 'column';
         return $this->render('index');
     }
 
-    /**
-     * Login action.
-     *
-     * @return string
-     */
+    public function actionDefault()
+    {
+        return $this->render('default');
+    }
+
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
@@ -65,21 +55,14 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
+            $this->layout = false;
+            return $this->render('login', ['model' => $model]);
         }
     }
 
-    /**
-     * Logout action.
-     *
-     * @return string
-     */
     public function actionLogout()
     {
         Yii::$app->user->logout();
-
         return $this->goHome();
     }
 }
