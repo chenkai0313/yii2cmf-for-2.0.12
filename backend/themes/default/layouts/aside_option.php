@@ -1,9 +1,9 @@
 <nav class="menu west-menu" id="west-menu" data-ride="menu">
     <button type="button" class="btn btn-primary"><i class="icon icon-edit"></i> 系统设置</button>
     <ul class="nav nav-primary">
-        <li class="nav-parent">
+        <li class="nav-parent active show">
             <a href="javascript:void(0)"><i class="icon icon-cogs"></i> 网站配置<i class="icon-chevron-right nav-parent-fold-icon"></i></a>
-            <ul class="nav">
+            <ul class="nav" style="display: block;">
                 <li><a href="javascript:void(0)" target="win"><i class="icon icon-info-sign"></i> 站点信息</a></li>
                 <li><a href="javascript:void(0)" target="win"><i class="icon icon-dashboard"></i> SEO 优化</a></li>
                 <li><a href="javascript:void(0)" target="win"><i class="icon icon-windows"></i> 系统配置</a></li>
